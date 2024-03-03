@@ -1,4 +1,6 @@
-package com.leetcode.arrays.trees;
+package com.leetcode.trees;
+
+
 
 import java.util.ArrayDeque;
 

@@ -7,19 +7,19 @@ public class BinaryTree {
     public static boolean isPathExists(TreeNode root, int target) {
         System.out.println("target is "+ target);
         if(root == null) return false;
-        if(root.val == target && root.leftNode == null && root.rightNode == null) return true;
-        return isPathExists(root.leftNode, target - root.val) || isPathExists(root.rightNode, target - root.val);
+        if(root.val == target && root.left == null && root.right == null) return true;
+        return isPathExists(root.left, target - root.val) || isPathExists(root.right, target - root.val);
     }
     public static void printNodesDFS(TreeNode root) {
         var stack = new Stack<TreeNode>();
         stack.push(root);
         while(!stack.isEmpty()){
             var currNode = stack.pop();
-            if(currNode.leftNode != null) {
-                stack.push(currNode.leftNode);
+            if(currNode.left != null) {
+                stack.push(currNode.left);
             }
-            if(currNode.rightNode != null) {
-                stack.push(currNode.rightNode);
+            if(currNode.right != null) {
+                stack.push(currNode.right);
             }
             System.out.println(currNode.val);
         }
@@ -29,11 +29,11 @@ public class BinaryTree {
         stack.add(root);
         while(!stack.isEmpty()){
             var currNode = stack.poll();
-            if(currNode.leftNode != null) {
-                stack.add(currNode.leftNode);
+            if(currNode.left != null) {
+                stack.add(currNode.left);
             }
-            if(currNode.rightNode != null) {
-                stack.add(currNode.rightNode);
+            if(currNode.right != null) {
+                stack.add(currNode.right);
             }
             System.out.print(currNode.val + ",");
         }
@@ -47,7 +47,7 @@ public class BinaryTree {
     private static void traverseRight(TreeNode node, List<Integer> list){
         if(node == null) return;
         list.add(node.val);
-        traverseRight(node.rightNode, list);
+        traverseRight(node.right, list);
     }
 
 }

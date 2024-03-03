@@ -1,6 +1,6 @@
 package com.leetcode.trees;
 import java.util.*;
-import com.leetcode.arrays.trees.TreeNode;
+
 //https://leetcode.com/problems/kth-smallest-element-in-a-bst/
 public class KthSmallestElement {
     public static int kthSmallest(TreeNode root, int k) {
