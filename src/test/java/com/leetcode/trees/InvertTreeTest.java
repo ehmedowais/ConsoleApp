@@ -1,4 +1,4 @@
-package com.leetcode.arrays.trees;
+package com.leetcode.trees;
 
 import com.leetcode.trees.InvertTree;
 import com.leetcode.trees.TreeNode;
