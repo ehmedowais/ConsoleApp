@@ -9,6 +9,11 @@ class MinCoinsToMakeAmtTest {
 
     @Test
     void minCoinsChange() {
+
         assertEquals(4, MinCoinsToMakeAmt.minCoinsChange(18, new int[]{7,5,1}));
+    }
+    @Test
+    void minCoinsChangeDP() {
+        assertEquals(4, MinCoinsToMakeAmt.minCoinsChangeDP(18, new int[]{7,5,1}));
     }
 }

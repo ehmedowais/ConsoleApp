@@ -1,5 +1,6 @@
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
+import com.java.general.CleanableRoom;
 import com.leetcode.arrays.TwoSum;
 
 import java.math.BigInteger;
@@ -10,7 +11,7 @@ import java.util.stream.Stream;
 
 import static com.leetcode.arrays.TwoSum.twoSumSquaredComplexity;
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         var twoSum = TwoSum.twoSumLinearComplexity(new int[]{2,7,11,15}, 9);
         assert twoSum[0]==0 : "Assertion successful";
         assert twoSum[1]==1 : "Second assertion successful too .......";
@@ -18,6 +19,12 @@ public class Main {
         var testData = List.of("1 2 50", "1 7 70","1 3 20","2 2 17");
         var response = processLogs(testData, 2);
         response.forEach(System.out::println);
+        try(CleanableRoom room = new CleanableRoom(5)){
+
+            room.createVectors();
+            room.readVector();
+            System.out.println("Good bye");
+        }
     }
 
     public static void targetSum(int[] arr) {
